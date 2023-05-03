@@ -8,10 +8,24 @@
     <title>Reijjo's Story</title>
   </head>
   <body>
-    <!-- CONTENT -->
+<!-- CONTENT -->
     <div class="container">
-			<!-- NAVBAR -->
-			<nav><a href='#aboutMe'>ABOUT MEEEE</a> <a href='#work'>WORK</a> <a href='#contact'>CONTAAACT</a></nav>
+<!-- NAVBAR -->
+			<nav>
+				<div class="left">
+					<a href="#aboutMe">ABOUT</a>
+					<a href="#work">WORK</a>
+					<a href="#contact">CONTACT</a>
+				</div>
+				<div class="right">
+					<a class='port-home' href='#home'>PORTFOLIO</a>
+				</div>
+			</nav>
+<!-- SLIDES -->
+			<div class="slides slide0 " id="home">
+        <img src="images/fox.jpg" />
+        <h2>Home</h1>
+      </div>
       <div class="slides slide1 " id="aboutMe">
         <img src="images/fox.jpg" />
         <h2>About Me</h1>
@@ -26,9 +40,12 @@
       </div>
 			<!-- FOOTER -->
 			<footer>
-				<div class="left">Reijjo</div>
+				<div class="left">
+					<a href='https://github.com/reijjo' target="_blank">REIJJO</a>
+				</div>
 				<div class="right">2023</div>
 			</footer>
     </div>
+		<script src="./scripts/smooth-scroll.js"></script>
   </body>
 </html>
