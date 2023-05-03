@@ -55,13 +55,18 @@ nav .left a {
   margin-left: 0;
 }
 
+nav .left a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1vh;
+}
+
 /* NAV RIGHT */
 
 nav .right {
   margin-right: 3vw;
 }
 
-nav .port-home {
+nav .right a:hover {
 }
 
 /* SLIDES */
@@ -88,19 +93,19 @@ nav .port-home {
 }
 
 .slide0 {
-  background: linear-gradient(454deg, lightblue, #9553ff);
+  background: linear-gradient(180deg, lightblue, #9553ff);
 }
 
 .slide1 {
-  background: linear-gradient(454deg, #4f4080, #9553ff);
+  background: linear-gradient(180deg, #9553ff, #4f4080);
 }
 
 .slide2 {
-  background: linear-gradient(454deg, #705600, #888b42);
+  background: linear-gradient(180deg, #4f4080, #9553ff);
 }
 
 .slide3 {
-  background: linear-gradient(454deg, #88026f, #7f3a76);
+  background: linear-gradient(180deg, #9553ff, lightblue);
 }
 
 /* FOOTER */

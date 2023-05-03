@@ -1,3 +1,5 @@
+// smooth scroll
+
 window.addEventListener("DOMContentLoaded", function () {
   var links = document.querySelectorAll('nav a[href^="#"]');
   for (var i = 0; i < links.length; i++) {
