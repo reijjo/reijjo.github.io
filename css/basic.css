@@ -179,11 +179,34 @@ nav .right a:hover::after {
   font-size: 2vh;
 }
 
+/* Work */
+#work * {
+  border: 2px solid red;
+}
+
+#work .blabla {
+  justify-content: center;
+  align-items: center;
+}
+
+#work .about {
+  font-size: 3vh;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+#work a {
+  text-decoration: none;
+  color: white;
+}
+
 /* Contact */
 #contact .blabla {
   justify-content: center;
   align-items: center;
 }
+
 #contact .about {
   display: flex;
   width: 30%;

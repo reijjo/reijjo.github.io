@@ -1,0 +1,89 @@
+:root {
+  --work: #9553ff;
+  --oma1-vaalsin: #243766;
+  --oma2-tumsin: #0c0f3f;
+  --oma3-vaalvihr: #ade7c5;
+  --oma4-tumvihr: #5c93a1;
+}
+
+#hypertube {
+  background: linear-gradient(180deg, var(--work), var(--oma1-vaalsin));
+}
+
+#matcha {
+  background: linear-gradient(180deg, var(--oma1-vaalsin), var(--oma2-tumsin));
+}
+
+#camagru {
+  background: linear-gradient(180deg, var(--oma2-tumsin), var(--oma3-vaalvihr));
+}
+
+#citybike {
+  background: linear-gradient(
+    180deg,
+    var(--oma3-vaalvihr),
+    var(--oma4-tumvihr)
+  );
+}
+
+#fdf {
+  background: linear-gradient(180deg, var(--oma4-tumvihr), var(--oma2-tumsin));
+}
+
+#ft_printf {
+  background: linear-gradient(180deg, var(--oma2-tumsin), var(--work));
+}
+
+.blabla {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+
+.otsikko {
+  flex-direction: column;
+  font-size: 8vw !important;
+  font-family: "Fahkwang", sans-serif;
+}
+
+#hypertube * {
+  border: 2px solid red;
+}
+
+#hypertube .blabla {
+  justify-content: center;
+  align-items: center;
+}
+
+#hypertube .about {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+#matcha * {
+  border: 2px solid red;
+}
+
+#matcha .blabla {
+  justify-content: center;
+  align-items: center;
+}
+
+#matcha .about {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .otsikko {
+    font-size: 8vh;
+  }
+
+  .blabla {
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+}
