@@ -1,7 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Delicious+Handrawn&family=Fahkwang&family=Montserrat&family=Rubik:wght@300&family=Sigmar&display=swap");
+/*
+font-family: 'Bruno Ace SC', cursive;
+font-family: 'Delicious Handrawn', cursive;
+font-family: 'Fahkwang', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Sigmar', cursive;
+*/
 
 * {
-  border: 1px solid red;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,6 +25,7 @@ body {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  font-family: "Fahkwang", sans-serif;
 }
 
 .container::-webkit-scrollbar {
@@ -66,14 +74,20 @@ nav .right {
   margin-right: 3vw;
 }
 
-nav .right a:hover {
+nav .right a::after {
+  content: "PORTFOLIO";
+  transition: all 2.3s ease-in-out;
+}
+
+nav .right a:hover::after {
+  content: "HOME";
 }
 
 /* SLIDES */
 
 .slides {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,9 +101,9 @@ nav .right a:hover {
 }
 
 .slides h2 {
-  font-size: 70px;
+  font-size: 8vw;
   font-weight: 600;
-  max-width: 650px;
+  max-width: 70%;
 }
 
 .slide0 {
@@ -106,6 +120,79 @@ nav .right a:hover {
 
 .slide3 {
   background: linear-gradient(180deg, #9553ff, lightblue);
+}
+
+/* Home */
+
+.blabla {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+
+.otsikko {
+  flex-direction: column;
+  font-size: 8vw !important;
+  font-family: "Fahkwang", sans-serif;
+}
+
+.randomInfo {
+  align-self: flex-end;
+  max-width: 70%;
+  font-size: 3vw;
+}
+
+/* About */
+
+.slide1 .otsikko {
+  align-self: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.aboutMe {
+  width: 60%;
+  font-size: 3.5vh;
+  margin-right: 1vw;
+}
+
+.aboutStuff {
+  width: 40%;
+  flex-direction: row;
+  font-size: 3vh;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background-color: black;
+  margin: 0vh 1vw 1vh 0vw;
+  padding: 1vh 2vw;
+  border-radius: 50px;
+  font-size: 2vh;
+}
+
+/* Contact */
+#contact .blabla {
+  justify-content: center;
+  align-items: center;
+}
+#contact .about {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 6vw;
+  max-width: 6vw;
 }
 
 /* FOOTER */
@@ -136,4 +223,76 @@ footer .right {
 footer .left a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 800px) {
+  nav {
+    font-size: 2vh;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .otsikko {
+    font-size: 8vh;
+  }
+
+  .randomInfo {
+    flex-wrap: wrap;
+    font-size: 3vh;
+  }
+
+  .blabla {
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+
+  #id {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .slide1 .otsikko {
+    align-self: center;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .aboutMe {
+    flex-grow: initial;
+    width: 60%;
+    font-size: 3.5vw;
+    margin-right: 1vw;
+  }
+
+  .aboutStuff {
+    width: 40%;
+    flex-direction: row;
+    font-size: 3vw;
+  }
+
+  .tags {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tags span {
+    background-color: black;
+    margin: 0vh 1vw 1vh 0vw;
+    padding: 1vh 2vw;
+    border-radius: 50px;
+    font-size: 2vw;
+  }
+
+  footer {
+    font-size: 2vh;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 }
