@@ -180,9 +180,6 @@ nav .right a:hover::after {
 }
 
 /* Work */
-#work * {
-  border: 2px solid red;
-}
 
 #work .blabla {
   justify-content: center;
@@ -263,6 +260,7 @@ footer .left a {
   .randomInfo {
     flex-wrap: wrap;
     font-size: 3vh;
+    margin-right: 2vw;
   }
 
   .blabla {

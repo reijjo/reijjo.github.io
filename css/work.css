@@ -46,13 +46,16 @@
   font-family: "Fahkwang", sans-serif;
 }
 
-#hypertube * {
-  border: 2px solid red;
+#work .about {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 3vw;
 }
 
 #hypertube .blabla {
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #hypertube .about {
@@ -61,13 +64,9 @@
   width: 100%;
 }
 
-#matcha * {
-  border: 2px solid red;
-}
-
 #matcha .blabla {
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #matcha .about {
@@ -85,5 +84,11 @@
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+  }
+
+  #work .about {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: large;
   }
 }
