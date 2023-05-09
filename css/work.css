@@ -11,27 +11,27 @@
 }
 
 #matcha {
-  background: linear-gradient(180deg, var(--oma1-vaalsin), var(--oma2-tumsin));
+  background: linear-gradient(180deg, var(--oma1-vaalsin), var(--oma4-tumvihr));
 }
 
 #camagru {
-  background: linear-gradient(180deg, var(--oma2-tumsin), var(--oma3-vaalvihr));
-}
-
-#citybike {
   background: linear-gradient(
     180deg,
-    var(--oma3-vaalvihr),
-    var(--oma4-tumvihr)
+    var(--oma4-tumvihr),
+    var(--oma3-vaalvihr)
   );
 }
 
+#citybike {
+  background: linear-gradient(180deg, var(--oma3-vaalvihr), var(--oma2-tumsin));
+}
+
 #fdf {
-  background: linear-gradient(180deg, var(--oma4-tumvihr), var(--oma2-tumsin));
+  background: linear-gradient(180deg, var(--oma2-tumsin), var(--oma1-vaalsin));
 }
 
 #ft_printf {
-  background: linear-gradient(180deg, var(--oma2-tumsin), var(--work));
+  background: linear-gradient(180deg, var(--oma1-vaalsin), var(--work));
 }
 
 .blabla {
@@ -46,33 +46,16 @@
   font-family: "Fahkwang", sans-serif;
 }
 
+.otsikko a {
+  text-decoration: none;
+  color: white;
+}
+
 #work .about {
   display: flex;
   justify-content: space-between;
   width: 90%;
   font-size: 3vw;
-}
-
-#hypertube .blabla {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#hypertube .about {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-#matcha .blabla {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#matcha .about {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -81,14 +64,38 @@
   }
 
   .blabla {
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+    padding: 10px;
   }
 
   #work .about {
     display: flex;
     flex-wrap: wrap;
     font-size: large;
+  }
+
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 10vw;
+  }
+
+  .aboutMe {
+    width: 100%;
+  }
+
+  .aboutStuff {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 0 2vw;
+  }
+
+  .tags {
+    padding: 0 2vw;
   }
 }
