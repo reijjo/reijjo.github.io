@@ -254,6 +254,11 @@ footer .left a {
     justify-content: center;
   }
 
+  #aboutMe .aboutStuff {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .otsikko {
     font-size: 8vh;
   }
