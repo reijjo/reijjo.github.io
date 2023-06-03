@@ -2,8 +2,10 @@
   --work: #9553ff;
   --oma1-vaalsin: #243766;
   --oma2-tumsin: #0c0f3f;
-  --oma3-vaalvihr: #ade7c5;
+  --oma3-vaalvihr: #8dbba0;
   --oma4-tumvihr: #5c93a1;
+  --oma5-punorang: #f28177;
+  --oma6-darkgreen: #2e5159;
 }
 
 #hypertube {
@@ -18,8 +20,25 @@
   background: linear-gradient(
     180deg,
     var(--oma4-tumvihr),
+    var(--oma5-punorang)
+  );
+}
+
+#camagru2 {
+  background: linear-gradient(
+    180deg,
+    var(--oma5-punorang),
     var(--oma3-vaalvihr)
   );
+}
+
+.renderlink {
+  text-decoration: underline;
+  color: white;
+}
+
+.renderlink:hover {
+  background-color: #2e5159;
 }
 
 #citybike {
@@ -67,9 +86,29 @@
   width: 100%;
 }
 
+.projlink {
+  margin: 1vh;
+  position: relative;
+}
+
+.projlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.projlink:hover::after {
+  width: 100%;
+}
+
 #work .about {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 90%;
   font-size: 3vw;
   flex-wrap: wrap;
