@@ -136,6 +136,23 @@ nav .right a:hover::after {
   font-family: "Fahkwang", sans-serif;
 }
 
+.smallLogo {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+.smallLogo img {
+  height: 100%;
+  width: 100%;
+  top: 15px;
+  right: -20px;
+  position: absolute;
+}
+
 .randomInfo {
   align-self: flex-end;
   max-width: 70%;
