@@ -1,2 +1,0 @@
-# reijjo.github.io
-Portfolio
