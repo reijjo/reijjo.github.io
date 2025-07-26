@@ -1,0 +1,120 @@
+.tarpit-intro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 18rem;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    /* border: 1px solid red; */
+  }
+}
+
+.tarpit-intro-text {
+  padding: 2rem;
+  border-right: 1px solid var(--deco-line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+
+  @media screen and (max-width: 800px) {
+    border: none;
+  }
+}
+
+.tarpit-what {
+  display: flex;
+  flex-direction: column;
+
+  & h3 {
+    text-transform: uppercase;
+  }
+
+  & p {
+    color: var(--text-light);
+    font-size: 0.925rem;
+    text-wrap: balance;
+  }
+}
+
+.tarpit-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-space-grotesk);
+  font-weight: 100;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.tarpit-tech-item {
+  border: 1px solid var(--deco-line);
+  padding: 0.25rem 0.5rem;
+  background-color: var(--primary);
+
+  &:hover {
+    transform: scale(1.5);
+    background-color: black;
+    border-color: var(--accent-tb-l);
+    cursor: default;
+  }
+}
+
+.tarpit-images {
+  display: grid;
+  grid-column: 2 / 4;
+
+  @media screen and (max-width: 800px) {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+  }
+}
+
+.tarpit-image-container {
+  border: 1px solid var(--deco-line);
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  margin: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    margin: 0.125rem;
+  }
+}
+
+.project-image {
+  position: relative;
+  height: 90%;
+  width: 90%;
+  border-radius: 0.25rem;
+
+  transition: all 0.3s ease-in;
+
+  @media screen and (max-width: 580px) {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+  }
+}
+
+.tarpit-image-container:hover .project-image {
+  width: 100%;
+  height: 100%;
+}
+
+.project-pic {
+  object-fit: fill;
+  border-radius: 0.25rem;
+
+  @media screen and (max-width: 580px) {
+    aspect-ratio: 1/1;
+  }
+}

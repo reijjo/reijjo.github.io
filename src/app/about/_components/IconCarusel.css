@@ -1,0 +1,88 @@
+.about-deco-box-carusel {
+  gap: 1rem;
+  position: relative;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (max-width: 900px) {
+    grid-row: 2/3;
+    padding: 2rem;
+  }
+}
+
+.about-deco-box-carusel-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0.5) 90%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  pointer-events: none;
+
+  @media screen and (max-width: 900px) {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 0.5) 90%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scrollUp 30s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  gap: 1rem;
+
+  @media screen and (max-width: 900px) {
+    animation: scrollSide 20s linear infinite;
+    flex-direction: row;
+    width: max-content;
+    top: 1rem;
+  }
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollSide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

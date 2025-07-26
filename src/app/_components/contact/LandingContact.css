@@ -1,0 +1,219 @@
+.contact-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-content {
+  width: min(90%, 1000px);
+  border-left: 1px solid var(--deco-line);
+  border-right: 1px solid var(--deco-line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50dvh;
+}
+
+.glowing-cv-strings {
+  display: flex;
+  flex-direction: column;
+  height: 30dvh;
+  width: max(200px, 40%);
+  border-left: 1px solid var(--deco-line);
+  border-right: 1px solid var(--deco-line);
+}
+
+.glowing-cv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.download-cv-button {
+  border-top: 1px solid var(--deco-line);
+  border-bottom: 1px solid var(--deco-line);
+  padding: 1rem 2rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-space-grotesk);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-wrap: balance;
+  text-align: center;
+  letter-spacing: 0.125em;
+  background-color: var(--accent);
+  color: black;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Refined box shadow for elegant depth */
+  box-shadow:
+    /* Inner glow */ inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    /* Subtle glow layers */ 0 0 12px var(--accent-tb-s),
+    0 0 24px var(--accent-tb-s),
+    /* Soft atmospheric glow */ 0 0 48px var(--accent-tb-l),
+    /* Clean highlight */ 0 2px 8px rgba(0, 0, 0, 0.15),
+    /* Gentle base shadow */ 0 4px 16px var(--accent-tb-s);
+
+  /* Subtle pulsing animation */
+  animation: gentlePulse 3s ease-in-out infinite alternate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      45deg,
+      var(--accent),
+      var(--accent-tb-l),
+      var(--accent)
+    );
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(4px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.4) 40%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1px) scale(1.01);
+
+    /* Refined hover glow */
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 16px var(--accent-tb-l),
+      0 0 32px var(--accent-tb-s), 0 0 64px var(--accent-tb-s),
+      0 3px 12px rgba(0, 0, 0, 0.2), 0 6px 20px var(--accent-tb-s);
+
+    &::before {
+      opacity: 1;
+      animation: rotateBorder 3s linear infinite;
+    }
+
+    &::after {
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px) scale(1.01);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Keyframe animations */
+@keyframes gentlePulse {
+  0% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 12px var(--accent-tb-s),
+      0 0 24px var(--accent-tb-s), 0 0 48px var(--accent-tb-l),
+      0 2px 8px rgba(0, 0, 0, 0.15), 0 4px 16px var(--accent-tb-s);
+  }
+  100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 16px var(--accent-tb-l),
+      0 0 28px var(--accent-tb-s), 0 0 56px var(--accent-tb-l),
+      0 2px 8px rgba(0, 0, 0, 0.15), 0 4px 16px var(--accent-tb-s);
+  }
+}
+
+@keyframes rotateBorder {
+  0% {
+    background: linear-gradient(
+      0deg,
+      var(--accent),
+      var(--accent-tb-l),
+      var(--accent)
+    );
+  }
+  25% {
+    background: linear-gradient(
+      90deg,
+      var(--accent),
+      var(--accent-tb-l),
+      var(--accent)
+    );
+  }
+  50% {
+    background: linear-gradient(
+      180deg,
+      var(--accent),
+      var(--accent-tb-l),
+      var(--accent)
+    );
+  }
+  75% {
+    background: linear-gradient(
+      270deg,
+      var(--accent),
+      var(--accent-tb-l),
+      var(--accent)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      360deg,
+      var(--accent),
+      var(--accent-tb-l),
+      var(--accent)
+    );
+  }
+}
+
+/* Refined ambient lighting effect */
+.glowing-cv {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, var(--accent-tb-s) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+    animation: subtleAmbient 5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes subtleAmbient {
+  0% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}

@@ -1,0 +1,9 @@
+.aboutPage {
+  background: radial-gradient(
+    circle,
+    var(--accent-tb-xs) 0%,
+    var(--primary) 50%
+  );
+  background-color: black;
+  min-height: calc(100dvh - 8rem);
+}

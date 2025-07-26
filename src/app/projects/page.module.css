@@ -1,0 +1,4 @@
+.projectPage {
+  background-color: var(--primary);
+  min-height: calc(100dvh - 8rem);
+}

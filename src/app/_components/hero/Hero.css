@@ -1,0 +1,104 @@
+.hero-section {
+  width: 100%;
+  /* min-height: 60dvh; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--deco-line);
+  /* padding: 0 2rem; */
+}
+
+.hero-content {
+  width: min(90%, 1000px);
+  border-left: 1px solid var(--deco-line);
+  border-right: 1px solid var(--deco-line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.hero-image-container {
+  width: min(60%, 16rem);
+  aspect-ratio: 5/6;
+  position: relative;
+}
+
+.hero-image {
+  object-fit: cover;
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Tape stuff */
+
+.tape {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  width: 1.5rem;
+
+  /* border: 1px solid red; */
+}
+
+.tape-top-left {
+  top: -0.5rem;
+  left: 0;
+  transform: rotate(25deg);
+  height: 3.5rem;
+}
+
+/* .tape-image {
+  width: 100%;
+  height: auto;
+  transform: rotate(-25deg);
+} */
+
+.tape-top-right {
+  top: -0.5rem;
+  right: 0;
+  transform: rotate(-32deg);
+  height: 4rem;
+}
+
+.tape-bottom-left {
+  bottom: -1rem;
+  left: 0;
+  transform: rotate(-45deg);
+  height: 4.5rem;
+}
+
+.tape-bottom-right {
+  bottom: -1rem;
+  right: 0;
+  transform: rotate(32deg);
+  height: 3.5rem;
+}
+
+.hero-titles {
+  width: min(600px, 90%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-title {
+  text-align: center;
+}
+
+.hero-subtitle {
+  text-wrap: balance;
+  text-align: center;
+}

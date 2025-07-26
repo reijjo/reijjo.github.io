@@ -1,0 +1,30 @@
+.projects {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-content {
+  width: min(90%, 1000px);
+  border-left: 1px solid var(--deco-line);
+  border-right: 1px solid var(--deco-line);
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-divider {
+  height: 2rem;
+  border-top: 1px solid var(--deco-line);
+  border-bottom: 1px solid var(--deco-line);
+  width: 100%;
+}
+
+.projects-divider-last {
+  height: 2rem;
+  border-top: 1px solid var(--deco-line);
+  width: 100%;
+  border-bottom: none;
+}
