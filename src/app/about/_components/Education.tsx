@@ -1,21 +1,42 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Education.css";
-import { faLaptopCode, faLaptopFile } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "motion/react";
+import { myAnimation, myAnimationDelay1, myAnimationDelay2 } from "data/motion";
 
 const Education = () => {
   return (
     <section className="education-section">
       <div className="education-content">
-        <div className="education-title">
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true }}
+          variants={myAnimation}
+          className="education-title"
+        >
           <div className="education-intro-icon">
             <FontAwesomeIcon icon={faLaptopFile} size="lg" />
           </div>
           <h2>Education</h2>
-        </div>
-        <div className="education-date">
+        </motion.div>
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true }}
+          variants={myAnimationDelay1}
+          className="education-date"
+        >
           <h4>10/2021 - 03/2023</h4>
-        </div>
-        <div className="education-description">
+        </motion.div>
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true }}
+          variants={myAnimation}
+          className="education-description"
+        >
           <div className="education-institution">
             <h4>
               <a href="https://www.hive.fi/en/" target="_blank">
@@ -28,7 +49,7 @@ const Education = () => {
               resources, and collaboration with peers
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

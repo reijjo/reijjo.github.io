@@ -1,3 +1,4 @@
+"use client";
 import {
   faBriefcase,
   faArrowUpRightFromSquare,
@@ -5,9 +6,17 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import "./Intro.css";
+import { motion } from "motion/react";
+import { myAnimation } from "data/motion";
 
 const ProjectIntro = () => (
-  <div className="project-intro">
+  <motion.div
+    initial="initial"
+    whileInView="inView"
+    viewport={{ once: true }}
+    variants={myAnimation}
+    className="project-intro"
+  >
     <div className="project-intro-text">
       <div className="project-intro-icon">
         <FontAwesomeIcon icon={faBriefcase} size="lg" />
@@ -27,7 +36,7 @@ const ProjectIntro = () => (
         />
       </Link>
     </div>
-  </div>
+  </motion.div>
 );
 
 export default ProjectIntro;

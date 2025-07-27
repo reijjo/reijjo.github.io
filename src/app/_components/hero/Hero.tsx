@@ -1,11 +1,20 @@
+"use client";
 import Image from "next/image";
 import "./Hero.css";
+import { motion } from "motion/react";
+import { myAnimation, myAnimationDelay1, myAnimationDelay2 } from "data/motion";
 
 export const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <div className="hero-image-container">
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true }}
+          variants={myAnimation}
+          className="hero-image-container"
+        >
           <div className="tape tape-top-left"></div>
           <div className="tape tape-top-right"></div>
           <div className="tape tape-bottom-left"></div>
@@ -21,15 +30,29 @@ export const Hero = () => {
             priority
             fill
           />
-        </div>
+        </motion.div>
         <div className="hero-titles">
-          <h1 className="hero-title">I am Teemu.</h1>
-          <h4 className="hero-subtitle">
+          <motion.h1
+            initial="initial"
+            whileInView="inView"
+            viewport={{ once: true }}
+            variants={myAnimationDelay1}
+            className="hero-title"
+          >
+            I am Teemu.
+          </motion.h1>
+          <motion.h4
+            initial="initial"
+            whileInView="inView"
+            viewport={{ once: true }}
+            variants={myAnimationDelay2}
+            className="hero-subtitle"
+          >
             {" "}
             Your favorite Full Stack Developer who builds the kind of tools I
             actually want to use. I learn by doing, and staying curious along
             the way.
-          </h4>
+          </motion.h4>
         </div>
       </div>
     </section>

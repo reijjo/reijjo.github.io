@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import "./IconCarusel.css";
+import { motion } from "motion/react";
+import { myAnimation, myAnimationDelay1 } from "data/motion";
 
 const IconCarusel = () => {
   const icons = [
@@ -43,10 +47,22 @@ const IconCarusel = () => {
   ];
 
   return (
-    <div className="about-deco-box-carusel">
+    <motion.div
+      className="about-deco-box-carusel"
+      initial="initial"
+      whileInView="inView"
+      viewport={{ once: true }}
+      variants={myAnimation}
+    >
       <div className="about-deco-box-carusel-inner"></div>
 
-      <div className="carousel-track">
+      <motion.div
+        className="carousel-track"
+        initial="initial"
+        whileInView="inView"
+        viewport={{ once: true }}
+        variants={myAnimationDelay1}
+      >
         {[...icons, ...icons].map((icon, index) => (
           <Image
             key={index}
@@ -57,8 +73,8 @@ const IconCarusel = () => {
             title={icon.title}
           />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

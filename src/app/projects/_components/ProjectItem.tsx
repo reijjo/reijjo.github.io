@@ -5,6 +5,8 @@ import "./ProjectItem.css";
 import "./ImageStack.css";
 import Image from "next/image";
 import ImageStack from "./ImageStack";
+import { motion } from "motion/react";
+import { myAnimation } from "data/motion";
 
 interface ProjectItemProps {
   logo: string;
@@ -53,14 +55,26 @@ const ProjectItem = ({
   return (
     <section className="my-projects-section">
       <div className="my-projects-info">
-        <div className="my-projects-title">
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true }}
+          variants={myAnimation}
+          className="my-projects-title"
+        >
           <div className="my-projects-intro-icon">
             <Image src={logo} alt="Fish Icon" width={24} height={24} />
           </div>
           <h3>{title}</h3>
           <p>{description}</p>
-        </div>
-        <div className="my-project-stuff">
+        </motion.div>
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true }}
+          variants={myAnimation}
+          className="my-project-stuff"
+        >
           <a className="stuff-what" onClick={() => toggleSection("what")}>
             <h4>What Is This?</h4>
             <button className="plus-button">
@@ -184,12 +198,18 @@ const ProjectItem = ({
               </div>
             </div>
           )}
-        </div>
-        <div className="my-projects-images-wrapper">
+        </motion.div>
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true }}
+          variants={myAnimation}
+          className="my-projects-images-wrapper"
+        >
           <div className="my-projects-images">
             <ImageStack images={images.desktop} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
