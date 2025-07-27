@@ -35,7 +35,7 @@ const ImageStack = ({ images }: ImageStackProps) => {
             height={isMobile ? 120 : 180}
             style={{
               width: "auto",
-              maxWidth: "360px",
+              maxWidth: isMobile ? "240px" : "360px",
               height: "auto",
               minHeight: "100%",
             }}
