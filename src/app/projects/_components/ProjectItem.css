@@ -69,6 +69,7 @@
   backdrop-filter: blur(0.5rem);
   height: 100%;
   grid-row: 2 / 3;
+  box-shadow: 0 8px 64px rgba(255, 255, 255, 0.125);
 
   @media screen and (max-width: 900px) {
     grid-row: 3/4;

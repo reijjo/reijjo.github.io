@@ -3,7 +3,6 @@ footer {
   height: max(10dvh, 4rem);
   width: 100%;
   position: relative;
-  /* padding: 0 2rem; */
 
   display: flex;
   align-items: center;
@@ -51,8 +50,8 @@ footer {
   cursor: pointer;
 
   @media screen and (max-width: 580px) {
-    font-size: 0.5rem;
-    min-width: 3.5rem;
+    font-size: 0.65rem;
+    min-width: 4.25rem;
   }
 }
 

@@ -33,6 +33,12 @@ const ImageStack = ({ images }: ImageStackProps) => {
             alt={`screenshot ${i + 1}`}
             width={isMobile ? 240 : 360}
             height={isMobile ? 120 : 180}
+            style={{
+              width: "auto",
+              maxWidth: "360px",
+              height: "auto",
+              minHeight: "100%",
+            }}
           />
         </div>
       ))}
