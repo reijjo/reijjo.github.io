@@ -1,0 +1,54 @@
+.stuff-problems {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.125);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  & h4 {
+    color: var(--text);
+  }
+}
+
+&:last-child {
+  border-bottom: none;
+}
+
+.open-section {
+  width: 100%;
+  padding: 1rem;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.125) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 255, 255, 0.125) 100%
+  );
+  background-color: black;
+  border-bottom: 1px solid var(--deco-line);
+}
+
+.problems-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.875rem;
+  padding: 1rem;
+  text-wrap: balance;
+}
