@@ -48,7 +48,7 @@ export const heroAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.65,
     },
   },
 };
@@ -59,7 +59,7 @@ export const heroAnimationDelay1 = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.65,
+      delay: 0.75,
     },
   },
 };
@@ -70,7 +70,7 @@ export const heroAnimationDelay2 = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.75,
+      delay: 0.85,
     },
   },
 };
