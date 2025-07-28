@@ -33,14 +33,18 @@ const TechSection = ({ toggleSection, section, stack }: TechSectionProps) => {
               <h4>Frontend</h4>
               <p>{stack.frontend}</p>
             </div>
-            <div className="backend-stack">
-              <h4>Backend</h4>
-              <p>{stack.backend}</p>
-            </div>
-            <div className="database-stack">
-              <h4>Database</h4>
-              <p>{stack.database}</p>
-            </div>
+            {stack.backend && (
+              <div className="backend-stack">
+                <h4>Backend</h4>
+                <p>{stack.backend}</p>
+              </div>
+            )}
+            {stack.database && (
+              <div className="database-stack">
+                <h4>Database</h4>
+                <p>{stack.database}</p>
+              </div>
+            )}
             {stack.devops && (
               <div className="devops-stack">
                 <h4>DevOps</h4>

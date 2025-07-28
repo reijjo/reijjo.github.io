@@ -1,0 +1,10 @@
+.websites-page-divider {
+  height: 2rem;
+  border-top: 1px solid var(--deco-line);
+  border-bottom: 1px solid var(--deco-line);
+  width: 100%;
+}
+
+.websites-page-divider:last-child {
+  border-bottom: none;
+}

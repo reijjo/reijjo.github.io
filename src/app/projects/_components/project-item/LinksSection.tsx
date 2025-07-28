@@ -23,7 +23,7 @@ const LinksSection = ({ toggleSection, section, links }: LinksSectionProps) => (
       </button>
     </a>
     {section === "links" && (
-      <div className="open-section links-section">
+      <div className="open-section links-section-line">
         <div className="open-section-text links-section">
           {links.live && (
             <div className="live-link">
