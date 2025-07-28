@@ -30,7 +30,6 @@
 
 .work-title {
   gap: 0.5rem;
-  /* padding: 3rem 2rem 2rem; */
   display: grid;
   grid-template-rows: 3rem 1fr;
 
