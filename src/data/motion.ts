@@ -41,3 +41,36 @@ export const myAnimationDelay3 = {
     },
   },
 };
+
+export const heroAnimation = {
+  initial: { opacity: 0, y: 50 },
+  inView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+    },
+  },
+};
+
+export const heroAnimationDelay1 = {
+  initial: { opacity: 0, y: 50 },
+  inView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.65,
+    },
+  },
+};
+
+export const heroAnimationDelay2 = {
+  initial: { opacity: 0, y: 50 },
+  inView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.75,
+    },
+  },
+};

@@ -2,7 +2,11 @@
 import Image from "next/image";
 import "./Hero.css";
 import { motion } from "motion/react";
-import { myAnimation, myAnimationDelay1, myAnimationDelay2 } from "data/motion";
+import {
+  heroAnimation,
+  heroAnimationDelay1,
+  heroAnimationDelay2,
+} from "data/motion";
 
 export const Hero = () => {
   return (
@@ -12,7 +16,7 @@ export const Hero = () => {
           initial="initial"
           whileInView="inView"
           viewport={{ once: true }}
-          variants={myAnimation}
+          variants={heroAnimation}
           className="hero-image-container"
         >
           <div className="tape tape-top-left"></div>
@@ -36,7 +40,7 @@ export const Hero = () => {
             initial="initial"
             whileInView="inView"
             viewport={{ once: true }}
-            variants={myAnimationDelay1}
+            variants={heroAnimationDelay1}
             className="hero-title"
           >
             I am Teemu.
@@ -45,7 +49,7 @@ export const Hero = () => {
             initial="initial"
             whileInView="inView"
             viewport={{ once: true }}
-            variants={myAnimationDelay2}
+            variants={heroAnimationDelay2}
             className="hero-subtitle"
           >
             {" "}
