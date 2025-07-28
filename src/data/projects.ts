@@ -98,7 +98,6 @@ const hypertube = {
   why: [
     "This was the final project of Hive Helsinki's web branch, designed to bring together everything we learned during the program.",
     "I was particularly interested in learning how to integrate OAuth login and handle torrent-based video delivery in a web-friendly way.",
-    ,
   ],
   challenges: [
     "Implementing OAuth login with GitHub and 42-school accounts was tricky, especially getting the authentication flow right and securely storing session cookies",
