@@ -5,6 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  animation: downToUp 1s ease-out 0s 1 normal forwards;
 }
 
 .projects-content {
@@ -27,4 +29,15 @@
   border-top: 1px solid var(--deco-line);
   width: 100%;
   border-bottom: none;
+}
+
+@keyframes downToUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
