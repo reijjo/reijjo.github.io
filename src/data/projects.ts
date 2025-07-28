@@ -22,7 +22,7 @@ const tarpit = {
   ],
   stack: {
     frontend: "React | TypeScript | CSS",
-    backend: "Bun | Express",
+    backend: "Bun | Express.js",
     database: "PostgreSQL | Sequelize | AWS RDS",
     devops: "Docker | GitHub Actions | pgAdmin",
     other: "RestAPI | Redux | RTK Query",
@@ -84,4 +84,127 @@ const yatzy = {
   },
 };
 
-export const projectInfo = [tarpit, yatzy];
+const hypertube = {
+  id: "hypertube",
+  logo: "/assets/icons/hypertube-nobg.png",
+  title: "Hypertube",
+  description: "Movie streaming service",
+  whatIs: [
+    "A fullstack streaming service that lets users search, watch, and comment on movies — all from within the browser.",
+    "The video player is fully integrated and streams videos via the BitTorrent protocol using the YTS API.",
+    "Subtitles are fetched dynamically from OpenSubtitles and can be switched during playback.",
+    "Built as a 3-person team project for the final Hive Helsinki web curriculum. I focused on the backend, authentication system, and video player integration.",
+  ],
+  why: [
+    "This was the final project of Hive Helsinki's web branch, designed to bring together everything we learned during the program.",
+    "I was particularly interested in learning how to integrate OAuth login and handle torrent-based video delivery in a web-friendly way.",
+    ,
+  ],
+  challenges: [
+    "Implementing OAuth login with GitHub and 42-school accounts was tricky, especially getting the authentication flow right and securely storing session cookies",
+    "Integrating the video player with the BitTorrent protocol required managing peer connections, buffering, and ensuring smooth playback without blocking the UI",
+    "Handling subtitles dynamically from OpenSubtitles API meant parsing and syncing subtitles properly, along with fallback logic based on user language and availability.",
+    "Persisting and managing movie data, including saving user history, marking watched movies, and periodically cleaning up old torrents, required careful database design and background job handling.",
+    "Maintaining a clean Dockerized development environment for frontend, backend, and database (pgAdmin/PostgreSQL) helped simulate real-world deployment but involved troubleshooting network and volume issues early on",
+  ],
+  stack: {
+    frontend: "React | TailwindCSS",
+    backend: "Node.js | Express.js",
+    database: "PostgreSQL",
+    devops: "Docker | pgAdmin",
+    other: "Oauth Login | RestAPI",
+  },
+  links: {
+    github: "https://github.com/reijjo/Hypertube",
+    live: "",
+  },
+  images: {
+    desktop: [
+      "/assets/images/projects/hypertube/land.png",
+      "/assets/images/projects/hypertube/movies.png",
+      "/assets/images/projects/hypertube/rolling.png",
+    ],
+    mobile: [],
+  },
+};
+
+const matcha = {
+  id: "matcha",
+  logo: "/assets/icons/matcha-nobg.png",
+  title: "Matcha",
+  description: "Dating app",
+  whatIs: [
+    "A fullstack dating app inspired by Tinder, built as part of the Hive Helsinki web curriculum.",
+    "Users can register, build a profile, browse potential matches, and chat in real-time once a match is made.",
+    "Features include location-based matching using OpenCage and IPapi, live notifications, and chat via WebSockets.",
+    "I was responsible for integrating authentication, setting up the backend, real-time features, and working with external APIs.",
+  ],
+  why: [
+    "This project was an opportunity to combine real-time features, location logic, and user interaction into one fullstack application.",
+    "It also served as a great way to practice working with sockets and geolocation in a real-world context.",
+  ],
+  challenges: [
+    "Implementing real-time notifications and chat using Socket.io required managing socket connections, user sessions, and message delivery efficiently.",
+    "Calculating distances between users using IP-based location data from OpenCage and IPapi presented accuracy and fallback challenges.",
+    "Ensuring user interactions (like visits, likes, matches) were stored and reflected correctly in the UI involved complex database logic and UI updates.",
+    "Populating the database with 500 fake user profiles for testing required scripting and careful insertion to simulate realistic user behavior.",
+  ],
+  stack: {
+    frontend: "React | TailwindCSS",
+    backend: "Node.js | Express.js",
+    database: "PostgreSQL",
+    devops: "Docker | pgAdmin",
+    other: "Socket.io | RestAPI",
+  },
+  links: {
+    github: "https://github.com/reijjo/Matcha",
+    live: "",
+  },
+  images: {
+    desktop: [
+      "/assets/images/projects/matcha/land.png",
+      "/assets/images/projects/matcha/feed.png",
+    ],
+    mobile: [],
+  },
+};
+
+const job = {
+  id: "Applications",
+  logo: "/assets/icons/male-office-worker.png",
+  title: "Job Applications",
+  description: "Place where I keep track of my job applications",
+  whatIs: [
+    "A personal tool to track and manage my job applications during the job hunt.",
+    "Features include adding new applications, editing details, deleting entries, and updating application status.",
+    "Simple and functional CRUD app with a clean UI and smooth user experience.",
+  ],
+  why: [
+    "I wanted a focused alternative to messy spreadsheets—something fast and made just for my own workflow.",
+    "It also gave me a good reason to try out GraphQL in a real-world scenario.",
+  ],
+  challenges: [
+    "This was the first project where I used GraphQL, and getting familiar with queries, mutations, and schema design was a valuable learning experience.",
+    "Thinking through how to structure filtering and sorting logic for future scalability gave me insight into GraphQL patterns and client-server data handling.",
+  ],
+  stack: {
+    frontend: "React | CSS",
+    backend: "Bun | Express.js",
+    database: "MongoDB",
+    devops: "",
+    other: "GraphQL",
+  },
+  links: {
+    github: "https://github.com/reijjo/duunihaku",
+    live: "",
+  },
+  images: {
+    desktop: [
+      "/assets/images/projects/duuni/land.png",
+      "/assets/images/projects/duuni/mod.png",
+    ],
+    mobile: [],
+  },
+};
+
+export const projectInfo = [tarpit, yatzy, job, hypertube, matcha];

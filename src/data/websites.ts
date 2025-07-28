@@ -17,7 +17,7 @@ const thisPage = {
   },
   links: {
     github: "https://github.com/reijjo/reijjo.github.io",
-    live: "https://reijjo.github.io/",
+    live: "",
   },
   images: {
     desktop: [
