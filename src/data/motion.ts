@@ -4,7 +4,7 @@ export const myAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.35,
     },
   },
 };
@@ -15,7 +15,7 @@ export const myAnimationDelay1 = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.65,
+      delay: 0.45,
     },
   },
 };
@@ -26,7 +26,7 @@ export const myAnimationDelay2 = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.75,
+      delay: 0.55,
     },
   },
 };
@@ -37,7 +37,7 @@ export const myAnimationDelay3 = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.85,
+      delay: 0.65,
     },
   },
 };
