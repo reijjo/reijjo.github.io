@@ -27,10 +27,10 @@ export const Hero = () => {
 
           <Image
             className="hero-image"
-            src="/assets/images/mina.jpg"
+            src="/assets/images/mina.webp"
             alt="Teemu"
             title="That's me"
-            sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+            sizes="(max-width: 768px) 80vw, 500px"
             priority
             fill
           />

@@ -33,9 +33,9 @@ const tarpit = {
   },
   images: {
     desktop: [
-      "/assets/images/projects/tarpit/landing.png",
-      "/assets/images/projects/tarpit/login.png",
-      "/assets/images/projects/tarpit/dash.png",
+      "/assets/images/projects/tarpit/landing.webp",
+      "/assets/images/projects/tarpit/login.webp",
+      "/assets/images/projects/tarpit/dash.webp",
     ],
     mobile: [],
   },
@@ -76,9 +76,9 @@ const yatzy = {
   },
   images: {
     desktop: [
-      "/assets/images/projects/yatzy/dash.png",
-      "/assets/images/projects/yatzy/yatzyDesk.png",
-      "/assets/images/projects/yatzy/points.png",
+      "/assets/images/projects/yatzy/dash.webp",
+      "/assets/images/projects/yatzy/yatzyDesk.webp",
+      "/assets/images/projects/yatzy/points.webp",
     ],
     mobile: [],
   },
@@ -119,9 +119,9 @@ const hypertube = {
   },
   images: {
     desktop: [
-      "/assets/images/projects/hypertube/land.png",
-      "/assets/images/projects/hypertube/movies.png",
-      "/assets/images/projects/hypertube/rolling.png",
+      "/assets/images/projects/hypertube/land.webp",
+      "/assets/images/projects/hypertube/movies.webp",
+      "/assets/images/projects/hypertube/rolling.webp",
     ],
     mobile: [],
   },
@@ -161,8 +161,8 @@ const matcha = {
   },
   images: {
     desktop: [
-      "/assets/images/projects/matcha/land.png",
-      "/assets/images/projects/matcha/feed.png",
+      "/assets/images/projects/matcha/land.webp",
+      "/assets/images/projects/matcha/feed.webp",
     ],
     mobile: [],
   },
@@ -199,8 +199,8 @@ const job = {
   },
   images: {
     desktop: [
-      "/assets/images/projects/duuni/land.png",
-      "/assets/images/projects/duuni/mod.png",
+      "/assets/images/projects/duuni/land.webp",
+      "/assets/images/projects/duuni/mod.webp",
     ],
     mobile: [],
   },
