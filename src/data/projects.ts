@@ -161,7 +161,7 @@ const matcha = {
   },
   images: {
     desktop: [
-      "/assets/images/projects/matcha/land.webp",
+      "/assets/images/projects/matcha/land.png",
       "/assets/images/projects/matcha/feed.webp",
     ],
     mobile: [],
