@@ -9,7 +9,9 @@ footer {
   justify-content: center;
   border-bottom: 1px solid var(--deco-line);
 
-  animation: leftToRight 1s ease-out 0s 1 normal forwards;
+  /* animation: leftToRight 1s ease-out 0s 1 normal forwards; */
+  isolation: isolate;
+  z-index: 1000;
 }
 
 .nav-bg {
@@ -24,15 +26,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1001;
 }
 
 .nav-links-wrapper {
   position: fixed;
+  /* top: max(5dvh, 2rem);  */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+
   font-size: 0.825rem;
   text-transform: uppercase;
   display: flex;
   gap: 0.125rem;
-  z-index: 5;
+  z-index: 9999; /* Very high z-index to stay above everything */
   padding: 0.75rem;
   backdrop-filter: blur(1rem);
   border-radius: 0.25rem;
@@ -74,9 +82,21 @@ footer {
 
 .contact-container {
   position: relative;
-  /* border: 1px solid red; */
   padding: 0;
   text-align: center;
+  z-index: 10000; /* Higher than nav wrapper */
+}
+
+/* Add hover area extension */
+.contact-container::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 5px; /* Small bridge between button and dropdown */
+  background: transparent;
+  z-index: 10000;
 }
 
 .contact-dropdown .nav-line.hover {
@@ -97,7 +117,6 @@ footer {
 
 .contact-dropdown {
   position: relative;
-  /* overflow: hidden; */
 }
 
 .contact-dropdown:hover span {
@@ -106,28 +125,37 @@ footer {
 
 .nav-dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   left: 0;
-  /* width: 100%; */
+  width: max-content;
+  min-width: 100%;
   display: none;
   flex-direction: column;
   background-color: var(--primary);
   border: 1px solid var(--deco-line);
   border-radius: 0.5rem;
-  z-index: 10;
+  z-index: 10001;
   overflow: hidden;
+
+  /* Smooth transitions */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 
   @media screen and (max-width: 580px) {
     font-size: 0.5rem;
   }
 }
 
-.contact-container:hover .nav-dropdown {
+.contact-container:hover .nav-dropdown,
+.contact-container:focus-within .nav-dropdown {
   display: flex;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-item {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   border-bottom: 1px solid var(--deco-line);
   color: white;
@@ -135,6 +163,9 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  white-space: nowrap;
+  min-height: 2rem;
+  align-items: center;
 
   &:last-child {
     text-wrap: nowrap;
@@ -186,7 +217,7 @@ footer {
 @keyframes rightToLeft {
   0% {
     transform: translateX(100%);
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     transform: translateX(0);

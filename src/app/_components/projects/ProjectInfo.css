@@ -94,6 +94,7 @@
   height: 90%;
   width: 90%;
   border-radius: 0.25rem;
+  backdrop-filter: blur(0.5rem);
 
   transition: all 0.3s ease-in;
 
