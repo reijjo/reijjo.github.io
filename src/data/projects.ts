@@ -1,3 +1,46 @@
+const ropsit = {
+  id: "ropsit",
+  logo: "/assets/icons/ropsit.ico",
+  title: "Ropsit",
+  description: "NBA player stats for sports betting / fantasy sports",
+  whatIs: [
+    "Ropsit is an NBA stats hub for people who care about player props and fantasy, not just final scores.",
+    "It pulls together player stats, team info, and injuries into one clean interface so you don’t have to bounce between multiple sites to get a feel for a slate.",
+    "Under the hood it’s a fullstack app with a SvelteKit frontend and a Rust + Axum + Python backend, built to feel fast and focused rather than like a sportsbook clone.",
+  ],
+  why: [
+    "When looking at NBA props, I always ended up with 5–10 tabs open for stats, injuries, and random tools, and it felt way more clunky than it should.",
+    "Ropsit is my attempt to have one place that shows the stuff I actually care about when deciding bets or fantasy plays, without ads or noise.",
+    "It was also a learning project: Rust, Axum, SvelteKit, and Python data scripts were all new to me, so this was a way to learn a completely different stack by building something I’d actually use.",
+  ],
+  challenges: [
+    "Learning Rust, Axum, SvelteKit, and the Python data tooling from scratch and getting them to play nicely together.",
+    "Figuring out how to structure the API so the frontend gets exactly the data it needs without a bunch of extra round trips.",
+    "Dealing with external NBA data sources and making the app handle slow or broken responses in a way that doesn’t break the UI.",
+    "Keeping the UI simple enough to scan quickly, while still letting you dig into more detailed stats when you want to.",
+    "Making the whole thing feel snappy even though there’s a lot going on behind the scenes with requests, parsing, and caching.",
+  ],
+  stack: {
+    frontend: "SvelteKit | TypeScript | CSS",
+    backend: "Rust (Axum) | Python",
+    database: "External NBA APIs + in-memory caching", // adjust if you add a real DB
+    devops: "Docker | Render | Netlify",
+    other: "REST API | nba_api | nbainjuries",
+  },
+  links: {
+    github: "https://github.com/reijjo/props",
+    live: "https://ropsit.netlify.app/",
+  },
+  images: {
+    desktop: [
+      "/assets/images/projects/props/team.png",
+      "/assets/images/projects/props/player.png",
+      "/assets/images/projects/props/landing.png",
+    ],
+    mobile: [],
+  },
+};
+
 const tarpit = {
   id: "tarpit",
   logo: "/assets/icons/fish.png",
@@ -206,4 +249,4 @@ const job = {
   },
 };
 
-export const projectInfo = [tarpit, yatzy, job, hypertube, matcha];
+export const projectInfo = [ropsit, tarpit, yatzy, job, hypertube, matcha];

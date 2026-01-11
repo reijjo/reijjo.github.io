@@ -6,6 +6,17 @@ import ProjectInfo from "./ProjectInfo";
 export const Projects = () => {
   const sneakPeeks = [
     {
+      id: "ropsit",
+      title: "Ropsit",
+      description: "NBA player props for sports betting / fantasy sports",
+      techStack: ["SvelteKit", "TypeScript", "Rust", "Axum", "Python", "CSS"],
+      image: {
+        desktop: "/assets/images/projects/props/landing.png",
+        mobile: "/assets/images/projects/props/landing.png",
+      },
+      imageAlt: "Ropsit landing page",
+    },
+    {
       id: "tarpit",
       title: "Tärpit",
       description: "Sports bet tracking made simple",
@@ -19,8 +30,8 @@ export const Projects = () => {
         "AWS",
       ],
       image: {
-        desktop: "/assets/images/projects/tarpit/landing.webp",
-        mobile: "/assets/images/projects/tarpit/mobile2.webp",
+        desktop: "/assets/images/projects/tarpit/landing.png",
+        mobile: "/assets/images/projects/tarpit/mobile2.png",
       },
       imageAlt: "Tärpit landing page",
     },
@@ -30,8 +41,8 @@ export const Projects = () => {
       description: "Classic dice game brought to the browser",
       techStack: ["React", "TypeScript", "Express.js", "CSS", "MongoDB"],
       image: {
-        desktop: "/assets/images/projects/yatzy/yatzyDesk.webp",
-        mobile: "/assets/images/projects/yatzy/yatzyMob.webp",
+        desktop: "/assets/images/projects/yatzy/yatzyDesk.png",
+        mobile: "/assets/images/projects/yatzy/yatzyMob.png",
       },
       imageAlt: "Yatzy landing page",
     },
