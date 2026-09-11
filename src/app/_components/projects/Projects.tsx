@@ -11,8 +11,8 @@ export const Projects = () => {
       description: "NBA player props for sports betting / fantasy sports",
       techStack: ["SvelteKit", "TypeScript", "Rust", "Axum", "Python", "CSS"],
       image: {
-        desktop: "/assets/images/projects/props/landing.png",
-        mobile: "/assets/images/projects/props/landing.png",
+        desktop: "/assets/images/projects/props/landing.webp",
+        mobile: "/assets/images/projects/props/landing.webp",
       },
       imageAlt: "Ropsit landing page",
     },
@@ -30,8 +30,8 @@ export const Projects = () => {
         "AWS",
       ],
       image: {
-        desktop: "/assets/images/projects/tarpit/landing.png",
-        mobile: "/assets/images/projects/tarpit/mobile2.png",
+        desktop: "/assets/images/projects/tarpit/landing.webp",
+        mobile: "/assets/images/projects/tarpit/mobile2.webp",
       },
       imageAlt: "Tärpit landing page",
     },
@@ -41,8 +41,8 @@ export const Projects = () => {
       description: "Classic dice game brought to the browser",
       techStack: ["React", "TypeScript", "Express.js", "CSS", "MongoDB"],
       image: {
-        desktop: "/assets/images/projects/yatzy/yatzyDesk.png",
-        mobile: "/assets/images/projects/yatzy/yatzyMob.png",
+        desktop: "/assets/images/projects/yatzy/yatzyDesk.webp",
+        mobile: "/assets/images/projects/yatzy/yatzyMob.webp",
       },
       imageAlt: "Yatzy landing page",
     },

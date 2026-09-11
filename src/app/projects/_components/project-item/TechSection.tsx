@@ -51,10 +51,12 @@ const TechSection = ({ toggleSection, section, stack }: TechSectionProps) => {
                 <p>{stack.devops}</p>
               </div>
             )}
-            <div className="other-stack">
-              <h4>Other</h4>
-              <p>{stack.other}</p>
-            </div>
+            {stack.other && (
+              <div className="other-stack">
+                <h4>Other</h4>
+                <p>{stack.other}</p>
+              </div>
+            )}
           </div>
         </div>
       )}

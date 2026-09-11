@@ -22,7 +22,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/components/*": ["./components/*"]
-    }
+    },
+    "ignoreDeprecations": "6.0",
+    "noUncheckedSideEffectImports": false
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

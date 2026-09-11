@@ -2,13 +2,16 @@ import "./LinksSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
+interface Links {
+  github?: string;
+  live?: string;
+  extraText?: string;
+}
+
 interface LinksSectionProps {
   toggleSection: (sectionName: string) => void;
   section: string | null;
-  links: {
-    github: string;
-    live?: string;
-  };
+  links: Links;
 }
 
 const LinksSection = ({ toggleSection, section, links }: LinksSectionProps) => (
@@ -36,7 +39,7 @@ const LinksSection = ({ toggleSection, section, links }: LinksSectionProps) => (
           <div className="github-link">
             <p>Check</p>
             <a href={links.github} target="_blank">
-              <h4>GitHub</h4>
+              <h4>{links.extraText ?? "GitHub"}</h4>
             </a>
           </div>
         </div>
