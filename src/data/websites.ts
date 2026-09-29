@@ -57,4 +57,34 @@ const luisaLore = {
   },
 };
 
-export const websiteInfo = [luisaLore, thisPage];
+const teaTingria = {
+  id: "teaTingria",
+  logo: "/assets/icons/teaLogo.png",
+  title: "Tea Tingria",
+  description: "Circus performancer",
+  whatIs: ["Portfolio page for circus performancer and teacher."],
+  why: [
+    "She struggled to do pages on her own with WordPress, so I offered to do the pages if we are not using WordPress",
+  ],
+  challenges: [
+    "Adding the nameservers on the domain/hosting service, specially finding the right place for Resend nameservers",
+  ],
+  stack: {
+    frontend: "SvelteKit | TypeScript | CSS",
+    backend: "",
+    database: "",
+    devops: "Cloudflare | Hostingpalvelu.fi",
+    other: "Resend",
+  },
+  links: {
+    github: "https://teatingria.com/",
+    live: "",
+    extraText: "teatingria.com",
+  },
+  images: {
+    desktop: ["/assets/images/projects/websites/teaWebsite.webp"],
+    mobile: ["/assets/images/projects/websites/teaWebsite.webp"],
+  },
+};
+
+export const websiteInfo = [luisaLore, teaTingria, thisPage];
